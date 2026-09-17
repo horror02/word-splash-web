@@ -132,7 +132,7 @@ const List = () => {
           <button
             onClick={handlePrev}
             disabled={page === 1}
-            className="flex items-center gap-1 px-4 py-2 rounded-xl border border-gray-200 bg-white/60 text-gray-600 text-sm font-medium hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-40 disabled:cursor-not-allowed transition"
+            className="flex items-center gap-1 px-4 py-2 rounded-xl border border-gray-200 bg-white/60 text-gray-600 text-sm font-medium hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-40 disabled:cursor-not-allowed transition cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4" /> Prev
           </button>
@@ -142,7 +142,7 @@ const List = () => {
               <button
                 key={i}
                 onClick={() => setPage(i + 1)}
-                className={`w-9 h-9 rounded-xl text-sm font-medium transition ${
+                className={`w-9 h-9 rounded-xl text-sm font-medium transition cursor-pointer ${
                   page === i + 1
                     ? "bg-purple-500 text-white shadow-sm"
                     : "bg-white/60 text-gray-600 hover:bg-purple-50 hover:text-purple-700"
@@ -156,7 +156,7 @@ const List = () => {
           <button
             onClick={handleNext}
             disabled={page === totalPages}
-            className="flex items-center gap-1 px-4 py-2 rounded-xl border border-gray-200 bg-white/60 text-gray-600 text-sm font-medium hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-40 disabled:cursor-not-allowed transition"
+            className="flex items-center gap-1 px-4 py-2 rounded-xl border border-gray-200 bg-white/60 text-gray-600 text-sm font-medium hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-40 disabled:cursor-not-allowed transition cursor-pointer"
           >
             Next <ChevronRight className="w-4 h-4" />
           </button>
