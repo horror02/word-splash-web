@@ -42,7 +42,6 @@ const List = () => {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50">
       <Header />
 
-      {/* Hero */}
       <section className="relative px-6 py-14 md:py-20 overflow-hidden">
         <div className="absolute top-2 left-4 text-purple-200 text-9xl font-serif select-none leading-none opacity-50">"</div>
         <div className="absolute bottom-2 right-6 text-pink-200 text-9xl font-serif select-none leading-none opacity-50 rotate-180">"</div>
@@ -59,7 +58,6 @@ const List = () => {
         </div>
       </section>
 
-      {/* Search */}
       <div className="px-6 max-w-5xl mx-auto w-full mb-8">
         <div className="flex items-center gap-3 bg-white/70 backdrop-blur-md border border-white/50 rounded-2xl px-5 py-3 shadow-sm">
           <Search className="w-4 h-4 text-purple-400 shrink-0" />
@@ -84,7 +82,6 @@ const List = () => {
         </div>
       </div>
 
-      {/* Grid */}
       <main className="flex-1 px-6 max-w-5xl mx-auto w-full">
         {isLoading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,7 +127,6 @@ const List = () => {
         )}
       </main>
 
-      {/* Pagination */}
       {!isLoading && totalPages > 1 && (
         <div className="flex justify-center items-center gap-2 py-10 px-6 flex-wrap">
           <button

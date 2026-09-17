@@ -7,8 +7,9 @@ const Header = () => {
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
         <Link
           to="/"
-          className="text-xl font-serif font-bold text-purple-600 tracking-wide hover:text-purple-700 transition"
+          className="flex items-center gap-2 text-xl font-serif font-bold text-purple-600 tracking-wide hover:text-purple-700 transition"
         >
+          <img src="/logo.svg" alt="Word Splash logo" className="w-8 h-8" />
           Word Splash
         </Link>
 
@@ -20,7 +21,7 @@ const Header = () => {
             Poems
           </Link>
           <Link to="/login">
-            <button className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-sm transition">
+            <button className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-sm transition cursor-pointer">
               Login
             </button>
           </Link>

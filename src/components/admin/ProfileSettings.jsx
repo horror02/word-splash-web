@@ -171,14 +171,13 @@ const ProfileSettings = () => {
                         <button
                             type="submit"
                             disabled={isSavingProfile}
-                            className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 rounded-xl text-sm transition disabled:opacity-60 mt-2"
+                            className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 rounded-xl text-sm transition disabled:opacity-60 mt-2 cursor-pointer"
                         >
                             {isSavingProfile ? "Saving..." : "Save Changes"}
                         </button>
                     </form>
                 </SectionCard>
 
-                {/* Change Password */}
                 <SectionCard
                     icon={Lock}
                     title="Change Password"
@@ -215,7 +214,7 @@ const ProfileSettings = () => {
                         <button
                             type="submit"
                             disabled={isSavingPassword}
-                            className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 rounded-xl text-sm transition disabled:opacity-60 mt-2"
+                            className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 rounded-xl text-sm transition disabled:opacity-60 mt-2 cursor-pointer"
                         >
                             {isSavingPassword ? "Updating..." : "Update Password"}
                         </button>

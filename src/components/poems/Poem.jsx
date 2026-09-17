@@ -59,7 +59,7 @@ const Poem = () => {
             <p className="text-gray-500 text-lg mb-4">Poem not found.</p>
             <button
               onClick={() => navigate("/poems/list")}
-              className="text-purple-500 hover:underline text-sm"
+              className="text-purple-500 hover:underline text-sm cursor-pointer"
             >
               Back to poems
             </button>
@@ -74,11 +74,10 @@ const Poem = () => {
       <Header />
 
       <main className="flex-1 px-4 sm:px-6 py-10 max-w-3xl mx-auto w-full">
-        {/* Top navigation bar */}
         <div className="flex items-center justify-between mb-10">
           <button
             onClick={() => navigate("/poems/list")}
-            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-purple-600 transition font-medium"
+            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-purple-600 transition font-medium cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
             All Poems
@@ -89,7 +88,7 @@ const Poem = () => {
               <button
                 onClick={() => prevId && navigate(`/poems/${prevId}`)}
                 disabled={!prevId}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm text-gray-500 hover:text-purple-600 hover:bg-purple-50 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm text-gray-500 hover:text-purple-600 hover:bg-purple-50 disabled:opacity-30 disabled:cursor-not-allowed transition cursor-pointer"
               >
                 <ChevronLeft className="w-4 h-4" /> Prev
               </button>
@@ -101,7 +100,7 @@ const Poem = () => {
               <button
                 onClick={() => nextId && navigate(`/poems/${nextId}`)}
                 disabled={!nextId}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm text-gray-500 hover:text-purple-600 hover:bg-purple-50 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm text-gray-500 hover:text-purple-600 hover:bg-purple-50 disabled:opacity-30 disabled:cursor-not-allowed transition cursor-pointer"
               >
                 Next <ChevronRight className="w-4 h-4" />
               </button>
@@ -109,7 +108,6 @@ const Poem = () => {
           )}
         </div>
 
-        {/* Poem card */}
         <div className="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-8 md:p-12 shadow-sm">
           <div className="w-10 h-1 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 mb-6" />
 
@@ -131,13 +129,12 @@ const Poem = () => {
           </div>
         </div>
 
-        {/* Bottom prev/next navigation */}
         {hasNav && (
           <div className="flex justify-between items-center mt-8 gap-4">
             <button
               onClick={() => prevId && navigate(`/poems/${prevId}`)}
               disabled={!prevId}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-200 bg-white/60 text-sm text-gray-600 hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-30 disabled:cursor-not-allowed transition"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-200 bg-white/60 text-sm text-gray-600 hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-30 disabled:cursor-not-allowed transition cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" /> Previous Poem
             </button>
@@ -145,7 +142,7 @@ const Poem = () => {
             <button
               onClick={() => nextId && navigate(`/poems/${nextId}`)}
               disabled={!nextId}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-200 bg-white/60 text-sm text-gray-600 hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-30 disabled:cursor-not-allowed transition"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-200 bg-white/60 text-sm text-gray-600 hover:bg-purple-50 hover:border-purple-200 hover:text-purple-700 disabled:opacity-30 disabled:cursor-not-allowed transition cursor-pointer"
             >
               Next Poem <ChevronRight className="w-4 h-4" />
             </button>

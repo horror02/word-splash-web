@@ -10,7 +10,6 @@ const Home = () => {
       <Header />
 
       <main className="flex flex-col items-center justify-center text-center flex-grow px-6 py-16 relative overflow-hidden">
-        {/* Decorative blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -left-24 w-80 h-80 bg-purple-200/30 rounded-full blur-3xl" />
           <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-pink-200/30 rounded-full blur-3xl" />
@@ -19,8 +18,8 @@ const Home = () => {
 
         <div className="relative z-10 max-w-2xl mx-auto">
           <div className="flex justify-center mb-6">
-            <div className="p-3 bg-white/70 border border-white/50 rounded-full shadow-sm">
-              <Feather className="w-5 h-5 text-purple-500" />
+            <div className="p-3 border border-white/50 rounded-full shadow-sm">
+              <img src="/logo.svg" alt="Word Splash logo" className="w-12 h-12" />
             </div>
           </div>
 

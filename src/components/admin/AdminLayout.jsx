@@ -33,7 +33,7 @@ const AdminLayout = ({ children }) => {
         <>
             <div className="p-6 border-b border-gray-100">
                 <Link to="/" className="flex items-center gap-2">
-                    <Feather className="w-5 h-5 text-purple-500" />
+                    <img src="/logo.svg" alt="Word Splash logo" className="w-8 h-8" />
                     <span className="text-lg font-serif font-bold text-purple-600">Word Splash</span>
                 </Link>
                 <p className="text-xs text-gray-400 mt-1 ml-7">Admin Panel</p>
@@ -65,7 +65,7 @@ const AdminLayout = ({ children }) => {
             <div className="p-4 border-t border-gray-100">
                 <button
                     onClick={handleLogout}
-                    className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 transition"
+                    className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 transition cursor-pointer"
                 >
                     <LogOut className="w-4 h-4" />
                     Logout
@@ -76,12 +76,10 @@ const AdminLayout = ({ children }) => {
 
     return (
         <div className="min-h-screen flex bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50">
-            {/* Desktop sidebar */}
             <aside className="hidden md:flex md:w-64 flex-col bg-white/80 backdrop-blur-md border-r border-white/40 shadow-sm">
                 <SidebarContent />
             </aside>
 
-            {/* Mobile overlay */}
             {sidebarOpen && (
                 <div
                     className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
@@ -89,7 +87,6 @@ const AdminLayout = ({ children }) => {
                 />
             )}
 
-            {/* Mobile sidebar */}
             <aside
                 className={`fixed top-0 left-0 h-full w-64 flex flex-col bg-white z-50 shadow-xl transition-transform duration-300 md:hidden ${
                     sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -98,9 +95,7 @@ const AdminLayout = ({ children }) => {
                 <SidebarContent />
             </aside>
 
-            {/* Main content */}
             <div className="flex-1 flex flex-col min-w-0">
-                {/* Mobile top bar */}
                 <div className="md:hidden flex items-center gap-4 px-4 py-3 bg-white/80 backdrop-blur-md border-b border-white/40 shadow-sm">
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}

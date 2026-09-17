@@ -28,11 +28,11 @@ const PreviewModal = ({ poem, onClose, onEdit }) => (
                 <div className="flex items-center gap-2">
                     <button
                         onClick={onEdit}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition cursor-pointer"
                     >
                         <Pencil className="w-3.5 h-3.5" /> Edit
                     </button>
-                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition">
+                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition cursor-pointer">
                         <X className="w-5 h-5" />
                     </button>
                 </div>
@@ -61,7 +61,7 @@ const EditModal = ({ poem, onClose, onSave, isSaving }) => {
             <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg">
                 <div className="flex items-center justify-between p-6 border-b border-gray-100">
                     <h3 className="text-lg font-serif font-semibold text-gray-800">Edit Poem</h3>
-                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition">
+                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition cursor-pointer">
                         <X className="w-5 h-5" />
                     </button>
                 </div>
@@ -88,14 +88,14 @@ const EditModal = ({ poem, onClose, onSave, isSaving }) => {
                 <div className="flex justify-end gap-3 px-6 pb-6">
                     <button
                         onClick={onClose}
-                        className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:bg-gray-50 transition"
+                        className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:bg-gray-50 transition cursor-pointer"
                     >
                         Cancel
                     </button>
                     <button
                         onClick={() => onSave(form)}
                         disabled={isSaving}
-                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500 text-white text-sm font-medium hover:bg-purple-600 disabled:opacity-60 transition"
+                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500 text-white text-sm font-medium hover:bg-purple-600 disabled:opacity-60 transition cursor-pointer"
                     >
                         <Check className="w-4 h-4" />
                         {isSaving ? "Saving..." : "Save Changes"}
@@ -119,14 +119,14 @@ const DeleteConfirmModal = ({ poem, onClose, onConfirm, isDeleting }) => (
             <div className="flex gap-3">
                 <button
                     onClick={onClose}
-                    className="flex-1 px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:bg-gray-50 transition"
+                    className="flex-1 px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:bg-gray-50 transition cursor-pointer"
                 >
                     Cancel
                 </button>
                 <button
                     onClick={onConfirm}
                     disabled={isDeleting}
-                    className="flex-1 px-4 py-2 rounded-xl bg-red-500 text-white text-sm font-medium hover:bg-red-600 disabled:opacity-60 transition"
+                    className="flex-1 px-4 py-2 rounded-xl bg-red-500 text-white text-sm font-medium hover:bg-red-600 disabled:opacity-60 transition cursor-pointer"
                 >
                     {isDeleting ? "Deleting..." : "Delete"}
                 </button>
@@ -182,7 +182,6 @@ const AdminDashboard = () => {
 
     return (
         <div>
-            {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 <div>
                     <h1 className="text-2xl font-serif font-semibold text-gray-800">Poems</h1>
@@ -190,13 +189,12 @@ const AdminDashboard = () => {
                 </div>
                 <button
                     onClick={() => setUploadOpen(true)}
-                    className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-2.5 rounded-xl text-sm font-medium shadow-sm transition"
+                    className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-2.5 rounded-xl text-sm font-medium shadow-sm transition cursor-pointer"
                 >
                     <Plus className="w-4 h-4" /> New Poem
                 </button>
             </div>
 
-            {/* Search */}
             <div className="flex items-center gap-3 bg-white/70 backdrop-blur-md border border-white/50 rounded-2xl px-5 py-3 shadow-sm mb-6 max-w-sm">
                 <Search className="w-4 h-4 text-purple-400 shrink-0" />
                 <input
@@ -213,7 +211,6 @@ const AdminDashboard = () => {
                 )}
             </div>
 
-            {/* Grid */}
             {isLoading ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     {Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => <SkeletonCard key={i} />)}
@@ -244,21 +241,21 @@ const AdminDashboard = () => {
                                 <div className="flex items-center gap-1">
                                     <button
                                         onClick={() => setPreviewingPoem(poem)}
-                                        className="p-1.5 rounded-lg text-gray-400 hover:text-blue-500 hover:bg-blue-50 transition"
+                                        className="p-1.5 rounded-lg text-gray-400 hover:text-blue-500 hover:bg-blue-50 transition cursor-pointer"
                                         title="Preview"
                                     >
                                         <Eye className="w-3.5 h-3.5" />
                                     </button>
                                     <button
                                         onClick={() => setEditingPoem(poem)}
-                                        className="p-1.5 rounded-lg text-gray-400 hover:text-purple-600 hover:bg-purple-50 transition"
+                                        className="p-1.5 rounded-lg text-gray-400 hover:text-purple-600 hover:bg-purple-50 transition cursor-pointer"
                                         title="Edit"
                                     >
                                         <Pencil className="w-3.5 h-3.5" />
                                     </button>
                                     <button
                                         onClick={() => setDeletingPoem(poem)}
-                                        className="p-1.5 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 transition"
+                                        className="p-1.5 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 transition cursor-pointer"
                                         title="Delete"
                                     >
                                         <Trash2 className="w-3.5 h-3.5" />
@@ -270,14 +267,13 @@ const AdminDashboard = () => {
                 </div>
             )}
 
-            {/* Pagination */}
             {!isLoading && totalPages > 1 && (
                 <div className="flex justify-center items-center gap-1.5 mt-8">
                     {Array.from({ length: totalPages }, (_, i) => (
                         <button
                             key={i}
                             onClick={() => setPage(i + 1)}
-                            className={`w-9 h-9 rounded-xl text-sm font-medium transition ${
+                            className={`w-9 h-9 rounded-xl text-sm font-medium transition cursor-pointer ${
                                 page === i + 1
                                     ? "bg-purple-500 text-white shadow-sm"
                                     : "bg-white/60 text-gray-600 hover:bg-purple-50"
@@ -289,7 +285,6 @@ const AdminDashboard = () => {
                 </div>
             )}
 
-            {/* Upload Modal */}
             {uploadOpen && (
                 <UploadPoems
                     onClose={() => setUploadOpen(false)}
@@ -297,7 +292,6 @@ const AdminDashboard = () => {
                 />
             )}
 
-            {/* Preview Modal */}
             {previewingPoem && (
                 <PreviewModal
                     poem={previewingPoem}
@@ -306,7 +300,6 @@ const AdminDashboard = () => {
                 />
             )}
 
-            {/* Modals */}
             {editingPoem && (
                 <EditModal
                     poem={editingPoem}
